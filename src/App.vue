@@ -1,30 +1,54 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <NavBar></NavBar>
   <router-view/>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap');
 
-nav {
-  padding: 30px;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  body{
+    background-color: #070404;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFF;
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+  }
+
+  .container {
+    margin-inline: 12rem;
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  @media (max-width: 1500px) {
+    .container{
+      margin-inline: 9rem;
+    }
+  }
+  @media (max-width: 1300px) {
+    .container{
+      margin-inline: 6rem;
+    }
+  }
+  @media (max-width: 1050px) {
+    .container{
+      margin-inline: 3rem;
+    }
+  }
 </style>
+
+<script>
+import NavBar from "./components/NavBar.vue";
+
+  export default {
+    components: { NavBar }
+}
+</script>
