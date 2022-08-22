@@ -54,7 +54,7 @@ export default {
           onApprove: async (data, actions) => {
             const order = await actions.order.capture();
             this.paidFor = true;
-            await axios.post('http://127.0.0.1:8000/api/donations', order)
+            await axios.post('https://walter-donation.herokuapp.com/api/donations', order)
               .then(response => console.log(response));
           },
           onError: err => {

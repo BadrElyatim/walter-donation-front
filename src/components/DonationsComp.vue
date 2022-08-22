@@ -18,7 +18,7 @@ export default {
         }
     },
     async created() {
-        await axios.get('http://127.0.0.1:8000/api/donations')
+        await axios.get('https://walter-donation.herokuapp.com/api/donations')
             .then(response => this.LastDonations = response.data)
     },
 }
